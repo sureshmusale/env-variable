@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest      
     steps:
     - name: context step
+    env:
+      First_Name: Mona    
       if: ${{ env.NAME == 'suresh' }}
-      run: echo "good"
+      run: echo "good $First_Name "
     
