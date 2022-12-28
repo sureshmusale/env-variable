@@ -1,0 +1,13 @@
+name: Environment Context
+
+on: [workflow_dispatch]
+env:
+  NAME: suresh
+jobs:
+  context-job:
+    runs-on: ubuntu-latest      
+    steps:
+    - name: context step
+      if: ${{ env.NAME == 'suresh' }}
+      run: echo "good"
+    
